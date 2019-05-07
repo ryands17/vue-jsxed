@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "postinstall": "node ./node_modules/husky/lib/installer/bin install",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
@@ -21,7 +22,10 @@
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
+    "husky": "^2.2.0",
+    "lint-staged": "^8.1.6",
     "node-sass": "^4.9.0",
+    "prettier": "^1.17.0",
     "sass-loader": "^7.1.0",
     "vue-template-compiler": "^2.5.21"
   },
@@ -43,6 +47,22 @@
     "plugins": {
       "autoprefixer": {}
     }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{vue,scss,md,json}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "es5"
   },
   "browserslist": [
     "> 1%",
