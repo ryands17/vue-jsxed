@@ -1,7 +1,7 @@
 <script>
 import { VContainer, VLayout, VFlex, VImg } from 'vuetify/lib'
 
-import logo from '../assets/logo.svg'
+import logo from '@/assets/logo.svg'
 
 export default {
   data: () => ({

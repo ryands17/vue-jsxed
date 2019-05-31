@@ -7,7 +7,8 @@ import {
   VBtn,
   VContent,
 } from 'vuetify/lib'
-import HelloWorld from './components/HelloWorld'
+
+import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
   name: 'App',
@@ -16,7 +17,7 @@ export default {
       <VApp>
         <VToolbar app>
           <VToolbarTitle class="headline text-uppercase">
-            <span>Vuetify</span>
+            <span>Vuetify </span>
             <span class="font-weight-light">MATERIAL DESIGN</span>
           </VToolbarTitle>
           <VSpacer />
